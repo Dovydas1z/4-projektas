@@ -1,11 +1,21 @@
+:root {
+    --oranzine: #ff4622;
+    --plotis: 1000px;
+    --soninis-atstumas: calc((100% - var(--plotis)) / 2);
+    --main-width: cac(var(--plotis) + var(--soninis-atstumas));
+    --text-width: calc(var(--plotis) * 0.4);
+    --text-margin: calc(var(--plotis) * 0.1);
+    --image-width: calc(100% - var(--plotis) / 2);
+}
+
 body {
     font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif
 }
 
 header {
     display: inline-block;
-    width: 1000px;
-    margin-left: calc(50% - 500px);   
+    width: var(--plotis);
+    margin-left: var(--soninis-atstumas);
 }
 
 header > img {
@@ -43,27 +53,56 @@ nav > a:first-child {
 }
 
 main {
+display: inline-block;
+width: var(--main-width);
+margin-left: var(--soninis-atstumas);
+margin-top: 50px;
+}
 
+div {
+    float: left;
+    width: var(--text-width);
+    margin-right: var(--text-margin);
+    margin-top: 50px;
 }
 
 h1 {
-
+    display: inline-block;
+    width: 100%;
+    font-size: 38px;
+    margin: 0;
 }
 
 h1 > span {
-
+    color: orange
 }
 
 p {
-font-family: Verdana, Geneva, Tahoma, sans-serif;
+    display: inline-block;
+    width: 100%;
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
 }
 
 div > a {
+    display: inline-block;
+    color: white;
+    padding: 10px;
+    background-color: orange;
+    text-decoration: none;
+    padding-left: 23px;
+    padding-right: 23px;
+    border-radius: 6px;
 
 }
 
-main > img {
+div > a:hover {
+    background-color:var(--oranzine);
+    color: #fff;
+}
 
+main > img {
+    float: left;
+    width: var(--image-width)
 }
 
 
